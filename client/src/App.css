@@ -1,0 +1,188 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111517;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: #fafafa;
+  color: #111517;
+  font-size: 1.6rem;
+}
+
+.layoutWrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+aside {
+  position: sticky;
+  top: 0rem;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 10rem;
+  height: 100vh;
+  border-radius: 0rem 2rem 2rem 0rem;
+  box-shadow: 0.6rem 0.1rem 1rem 0rem rgba(0,0,0,0.15);
+
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 140rem;
+  padding: 0 2rem;
+  width: 100%;
+  grid-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.programsContainer {
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+}
+
+.clipsContianer {
+  grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+
+}
+
+.Card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem -0.3rem rgba(0, 0, 0, .1), 0 0.4rem 0.6rem -0.4rem rgba(0, 0, 0, .1);
+  color: #111517;
+  text-decoration: none;
+}
+
+
+.programCard {}
+
+.clipCard {
+  background-color: #ccc;
+}
+
+.programImgWrapper img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 35rem;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+
+.clipImgWrapper img {
+  display: block;
+  padding: 2rem;
+  width: 40%;
+  object-fit: cover;
+  /* object-position: center; */
+  margin: 0 auto;
+  height: 25rem;
+}
+
+
+.cardPadd {
+  padding: 2rem;
+}
+
+.clipCardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cardBody .title {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.cardBody p span {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.clipDate span {
+  display: block;
+}
+
+.clipDate {
+  margin: 1rem 0;
+}
+
+.desc {
+  margin: 1rem 0;
+}
+
+audio {
+  margin: 1rem;
+  width: 100%;
+}
+
+@keyframes spin {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid #546e7a;
+  border-top: 0.5rem solid #bdbdbd;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  box-shadow: 0 1rem 1.5rem -0.3rem rgb(0 0 0 / 10%), 0 0.4rem 0.6rem -0.4rem rgb(0 0 0 / 10%);
+}
+
+.spinnerContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 1200px) {
+  .layoutWrapper {
+    flex-direction: column;
+  }
+
+  aside {
+   width: 100%;
+   border-radius: 0;
+   height: 7rem;
+  }
+}
